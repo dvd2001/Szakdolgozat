@@ -1,3 +1,3 @@
 # Szakdolgozat
 
-## Balogh Dávid (HPQ9EO)
+### Balogh Dávid (HPQ9EO)

@@ -14,5 +14,6 @@
         public required double Weight { get; set; }
         public string ExteriorColor { get; set; } = default!;
         public string InteriorColor { get; set; } = default!;
+        public SalonDTO Salon { get; set; } = default!;
     }
 }

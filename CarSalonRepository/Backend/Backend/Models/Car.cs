@@ -18,6 +18,6 @@ namespace Backend.Models
         public required double Weight { get; set; }
         public string ExteriorColor { get; set; } = default!;
         public string InteriorColor { get; set; } = default!;
-        public Salon Salon { get; set; } = default!;
+        public Guid SalonId { get; set; } = default!;
     }
 }

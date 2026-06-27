@@ -35,7 +35,7 @@ namespace Backend.Services
                 Weight = car.Weight,
                 ExteriorColor = car.ExteriorColor,
                 InteriorColor = car.InteriorColor,
-                SalonId = car.Salon.SalonId
+                SalonId = car.SalonId
             };
         }
 

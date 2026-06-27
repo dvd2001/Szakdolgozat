@@ -21,7 +21,7 @@ namespace Backend.Repositories
             {
                 throw new RepositoryException($"Salon with ID {salonId} not found.");
             }
-            car.Salon = salonExists;
+            car.SalonId = salonExists.SalonId;
             await _context.Cars.AddAsync(car);
             await _context.SaveChangesAsync();
             return car;

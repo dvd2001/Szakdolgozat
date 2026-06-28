@@ -50,18 +50,18 @@ namespace Backend.Controllers
         /// <summary>
         /// Get a Car by its ID (ChassisNumber).
         /// </summary>
-        /// <param name="carId"></param>
+        /// <param name="chassisNumber"></param>
         /// <response code="200">Car retrieved successfully</response>
         /// <response code="404">Car not found</response>
-        [HttpGet("{carId}", Name = nameof(GetCarById))]
+        [HttpGet("{chassisNumber}", Name = nameof(GetCarById))]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetCarById(string carId)
+        public async Task<IActionResult> GetCarById(string chassisNumber)
         {
             try
             {
-                var result = await carService.GetCarById(carId);
+                var result = await carService.GetCarById(chassisNumber);
                 return Ok(result);
             }
             catch (RepositoryException ex)
@@ -94,18 +94,18 @@ namespace Backend.Controllers
         /// <summary>
         /// Deletes a Car by its ID (ChassisNumber).
         /// </summary>
-        /// <param name="carId"></param>
+        /// <param name="chassisNumber"></param>
         /// <response code="200">Car deleted successfully</response>
         /// <response code="404">Car not found</response>
-        [HttpDelete("{carId}", Name = nameof(DeleteCar))]
+        [HttpDelete("{chassisNumber}", Name = nameof(DeleteCar))]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteCar(string carId)
+        public async Task<IActionResult> DeleteCar(string chassisNumber)
         {
             try
             {
-                var result = await carService.DeleteCar(carId);
+                var result = await carService.DeleteCar(chassisNumber);
                 return Ok(result);
             }
             catch (RepositoryException ex)

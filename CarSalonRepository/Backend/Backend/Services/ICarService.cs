@@ -6,9 +6,9 @@ namespace Backend.Services
     {
         Task<CarDTO> CreateCar(CreateCarDTO car, Guid salonId);
         Task<IEnumerable<CarDTO>> GetAllCars();
-        Task<CarDTO> GetCarById(string carId);
+        Task<CarDTO> GetCarById(string chassisNumber);
         Task<CarDTO> EditCar(EditCarDTO car);
-        Task<CarDTO> DeleteCar(string carId);
+        Task<CarDTO> DeleteCar(string chassisNumber);
         Task<IEnumerable<CarDTO>> DeleteAllCars();
     }
 }

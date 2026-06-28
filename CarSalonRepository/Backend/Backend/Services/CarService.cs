@@ -58,7 +58,7 @@ namespace Backend.Services
                 Weight = car.Weight,
                 ExteriorColor = car.ExteriorColor,
                 InteriorColor = car.InteriorColor,
-                SalonId = car.Salon.SalonId
+                SalonId = car.SalonId
             };
             var result = await carRepository.EditCar(editedCar);
             var editedCarDTO = dtoConversionService.ConvertCarToCarDTO(result);

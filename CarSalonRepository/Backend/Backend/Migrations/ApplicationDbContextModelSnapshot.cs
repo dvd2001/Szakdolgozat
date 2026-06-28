@@ -85,7 +85,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.PrimitiveCollection<string>("Cars")
+                    b.PrimitiveCollection<string>("CarIds")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

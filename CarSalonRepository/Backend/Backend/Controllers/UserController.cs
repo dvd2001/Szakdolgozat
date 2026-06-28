@@ -72,17 +72,18 @@ namespace Backend.Controllers
         /// Edits a user.
         /// </summary>
         /// <param name="user"></param>
+        /// <param name="userId"></param>
         /// <response code="200">User edited successfully.</response>
         /// <response code="404">User not found.</response>
         [HttpPut("{userId}", Name = nameof(EditUser))]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> EditUser(EditUserDTO user)
+        public async Task<IActionResult> EditUser(EditUserDTO user, Guid userId)
         {
             try
             {
-                var result = await userService.EditUser(user);
+                var result = await userService.EditUser(user, userId);
                 return Ok(result);
             }
             catch(RepositoryException ex)

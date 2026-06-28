@@ -37,7 +37,7 @@ namespace Backend.Services
             return dtoConversionService.ConvertUserToUserDTO(result);
         }
 
-        public async Task<UserDTO> EditUser(EditUserDTO user)
+        public async Task<UserDTO> EditUser(EditUserDTO user, Guid userId)
         {
             using (SHA256 mySHA256 = SHA256.Create())
             {
@@ -45,7 +45,7 @@ namespace Backend.Services
                 byte[] hashedPasswordBytes = mySHA256.ComputeHash(passwordBytes);
                 var userToEdit = new User
                 {
-                    UserId = user.UserId,
+                    UserId = userId,
                     Username = user.Username,
                     Password = Convert.ToBase64String(hashedPasswordBytes)
                 };

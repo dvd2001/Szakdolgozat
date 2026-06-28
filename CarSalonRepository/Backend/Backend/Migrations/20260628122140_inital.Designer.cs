@@ -13,7 +13,7 @@ namespace Backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20260628122140_inital")]
-    partial class inital
+    partial class Inital
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

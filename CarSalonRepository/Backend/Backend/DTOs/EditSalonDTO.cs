@@ -8,5 +8,6 @@
         public string? PhoneNumber { get; set; } = default!;
         public string? Email { get; set; } = default!;
         public string? Website { get; set; } = default!;
+        public IEnumerable<CarDTO> Cars { get; set; } = new List<CarDTO>();
     }
 }

@@ -47,7 +47,22 @@ namespace Backend.Services
                 Address = salonDTO.Address,
                 PhoneNumber = salonDTO.PhoneNumber,
                 Email = salonDTO.Email,
-                Website = salonDTO.Website
+                Website = salonDTO.Website,
+                Cars = salonDTO.Cars.Select(car => new Car { 
+                    ChassisNumber = car.ChassisNumber,
+                    Make = car.Make,
+                    Model = car.Model,
+                    YearOfManufacture = car.YearOfManufacture,
+                    EngineType = car.EngineType,
+                    Price = car.Price,
+                    FuleConsumption = car.FuleConsumption,
+                    DriveType = car.DriveType,
+                    GearboxType = car.GearboxType,
+                    Weight = car.Weight,
+                    ExteriorColor = car.ExteriorColor,
+                    InteriorColor = car.InteriorColor,
+                    SalonId = salonId
+                }).ToList() ?? new List<Car>()
             };
             var result = await salonRepository.EditSalon(editedSalon);
             var editedSalonDTO = dtoConversionService.ConvertSalonToSalonDTO(result);

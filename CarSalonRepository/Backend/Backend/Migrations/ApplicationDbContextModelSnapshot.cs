@@ -72,6 +72,8 @@ namespace Backend.Migrations
 
                     b.HasKey("ChassisNumber");
 
+                    b.HasIndex("SalonId");
+
                     b.ToTable("Cars");
                 });
 
@@ -82,10 +84,6 @@ namespace Backend.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.PrimitiveCollection<string>("CarIds")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -124,6 +122,20 @@ namespace Backend.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Backend.Models.Car", b =>
+                {
+                    b.HasOne("Backend.Models.Salon", null)
+                        .WithMany("Cars")
+                        .HasForeignKey("SalonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Backend.Models.Salon", b =>
+                {
+                    b.Navigation("Cars");
                 });
 #pragma warning restore 612, 618
         }

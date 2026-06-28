@@ -1,7 +1,6 @@
 ﻿using Backend.Repositories;
 using Backend.Database;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Backend
 {

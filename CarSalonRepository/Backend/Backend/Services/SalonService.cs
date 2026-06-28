@@ -15,8 +15,7 @@ namespace Backend.Services
                 Address = salonDTO.Address,
                 PhoneNumber = salonDTO.PhoneNumber,
                 Email = salonDTO.Email,
-                Website = salonDTO.Website,
-                CarIds = salonDTO.CarIds.ToList()
+                Website = salonDTO.Website
             };
 
             var createdSalon = await salonRepository.CreateSalon(newSalon);
@@ -48,8 +47,7 @@ namespace Backend.Services
                 Address = salonDTO.Address,
                 PhoneNumber = salonDTO.PhoneNumber,
                 Email = salonDTO.Email,
-                Website = salonDTO.Website,
-                CarIds = salonDTO.CarIds.ToList()
+                Website = salonDTO.Website
             };
             var result = await salonRepository.EditSalon(editedSalon);
             var editedSalonDTO = dtoConversionService.ConvertSalonToSalonDTO(result);

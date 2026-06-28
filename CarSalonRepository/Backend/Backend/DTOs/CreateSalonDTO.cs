@@ -7,6 +7,6 @@
         public string? PhoneNumber { get; set; } = default!;
         public string? Email { get; set; } = default!;
         public string? Website { get; set; } = default!;
-        public IEnumerable<CreateCarDTO> Cars { get; set; } = new List<CreateCarDTO>();
+        public IEnumerable<string> CarIds { get; set; } = new List<string>();
     }
 }

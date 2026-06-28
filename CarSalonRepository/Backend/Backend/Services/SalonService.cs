@@ -16,21 +16,7 @@ namespace Backend.Services
                 PhoneNumber = salonDTO.PhoneNumber,
                 Email = salonDTO.Email,
                 Website = salonDTO.Website,
-                Cars = salonDTO.Cars.Select(carDTO => new Car
-                {
-                    ChassisNumber = carDTO.ChassisNumber,
-                    Make = carDTO.Make,
-                    Model = carDTO.Model,
-                    YearOfManufacture = carDTO.YearOfManufacture,
-                    EngineType = carDTO.EngineType,
-                    Price = carDTO.Price,
-                    FuleConsumption = carDTO.FuleConsumption,
-                    DriveType = carDTO.DriveType,
-                    GearboxType = carDTO.GearboxType,
-                    Weight = carDTO.Weight,
-                    ExteriorColor = carDTO.ExteriorColor,
-                    InteriorColor = carDTO.InteriorColor
-                }).ToList() ?? new List<Car>()
+                CarIds = salonDTO.CarIds.ToList()
             };
 
             var createdSalon = await salonRepository.CreateSalon(newSalon);
@@ -53,31 +39,17 @@ namespace Backend.Services
             return salonDTOs;
         }
 
-        public async Task<SalonDTO> EditSalon(EditSalonDTO salonDTO)
+        public async Task<SalonDTO> EditSalon(EditSalonDTO salonDTO, Guid salonId)
         {
             var editedSalon = new Salon
             {
-                SalonId = salonDTO.SalonId,
+                SalonId = salonId,
                 Name = salonDTO.Name,
                 Address = salonDTO.Address,
                 PhoneNumber = salonDTO.PhoneNumber,
                 Email = salonDTO.Email,
                 Website = salonDTO.Website,
-                Cars = salonDTO.Cars.Select(carDTO => new Car
-                {
-                    ChassisNumber = carDTO.ChassisNumber,
-                    Make = carDTO.Make,
-                    Model = carDTO.Model,
-                    YearOfManufacture = carDTO.YearOfManufacture,
-                    EngineType = carDTO.EngineType,
-                    Price = carDTO.Price,
-                    FuleConsumption = carDTO.FuleConsumption,
-                    DriveType = carDTO.DriveType,
-                    GearboxType = carDTO.GearboxType,
-                    Weight = carDTO.Weight,
-                    ExteriorColor = carDTO.ExteriorColor,
-                    InteriorColor = carDTO.InteriorColor
-                }).ToList() ?? new List<Car>()
+                CarIds = salonDTO.CarIds.ToList()
             };
             var result = await salonRepository.EditSalon(editedSalon);
             var editedSalonDTO = dtoConversionService.ConvertSalonToSalonDTO(result);

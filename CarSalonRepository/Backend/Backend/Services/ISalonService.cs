@@ -7,7 +7,7 @@ namespace Backend.Services
         Task<SalonDTO> CreateSalon(CreateSalonDTO salon);
         Task<IEnumerable<SalonDTO>> GetAllSalons();
         Task<SalonDTO> GetSalonById(Guid salonId);
-        Task<SalonDTO> EditSalon(EditSalonDTO salon);
+        Task<SalonDTO> EditSalon(EditSalonDTO salon, Guid salonId);
         Task<SalonDTO> DeleteSalon(Guid salonId);
         Task<IEnumerable<SalonDTO>> DeleteAllSalons();
     }

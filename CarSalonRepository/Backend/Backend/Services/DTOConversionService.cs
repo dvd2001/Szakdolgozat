@@ -15,7 +15,7 @@ namespace Backend.Services
                 PhoneNumber = salon.PhoneNumber,
                 Email = salon.Email,
                 Website = salon.Website,
-                CarIds = salon.Cars.Select(car => car.ChassisNumber).ToList()
+                CarIds = salon.CarIds.ToList()
             };
         }
 

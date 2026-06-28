@@ -104,11 +104,11 @@ namespace Backend.Controllers
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> EditSalon(EditSalonDTO salon)
+        public async Task<IActionResult> EditSalon(EditSalonDTO salon, Guid salonId)
         {
             try
             {
-                await salonService.EditSalon(salon);
+                await salonService.EditSalon(salon, salonId);
                 return Ok(salon);
             }
             catch (RepositoryException ex)

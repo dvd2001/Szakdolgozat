@@ -28,7 +28,7 @@ namespace Backend.Repositories
 
         public async Task<Salon> GetSalonById(Guid salonId)
         {
-            var salon = await _context.Salons.Include(s => s.Cars).FirstOrDefaultAsync(s => s.SalonId == salonId);
+            var salon = await _context.Salons.FirstOrDefaultAsync(s => s.SalonId == salonId);
             if (salon == null)
             {
                 throw new RepositoryException($"Salon with ID {salonId} not found.");

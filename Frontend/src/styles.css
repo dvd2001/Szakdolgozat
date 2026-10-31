@@ -2,3 +2,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --bg-color: #33aae4;
+    --bg-transparent: #33aae4aa;
+    --text-color: #021843;
+}

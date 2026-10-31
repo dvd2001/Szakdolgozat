@@ -1,0 +1,24 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+img {
+    width: 75px;
+    height: auto;
+}

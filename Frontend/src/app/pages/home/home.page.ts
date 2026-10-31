@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { Navbar } from '../../components/navbar/navbar';
 
 @Component({
   selector: 'app-home.page',
-  imports: [],
+  imports: [Navbar],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css',
 })
-export class HomePage {}
+export class HomePage {
+  constructor() { }
+}

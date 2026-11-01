@@ -89,6 +89,7 @@ app-navbar {
     padding: 10px;
     position: sticky;
     top: 13.5vh;
+    margin-top: 2vh;
 }
 
 #list {

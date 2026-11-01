@@ -41,5 +41,6 @@
     </div>
     <div id="list">
         <h2 *ngIf="isNoContent">Nincs ilyen autó az adatbázisban!</h2>
+        <app-car-card *ngFor="let car of carList" [car]="car"></app-car-card>
     </div>
 </div>

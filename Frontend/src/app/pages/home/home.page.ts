@@ -3,6 +3,7 @@ import { Navbar } from '../../components/navbar/navbar';
 import { NgIf, NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 import { CarCard } from '../../components/car-card/car-card';
+import { Car } from '../../models/Car';
 
 @Component({
   selector: 'app-home.page',
@@ -13,7 +14,7 @@ import { CarCard } from '../../components/car-card/car-card';
 export class HomePage implements OnInit {
 
   public isNoContent: boolean = true;
-  public carList: any[] = [];
+  public carList: Car[] = [];
 
   constructor(private router: Router) { }
 

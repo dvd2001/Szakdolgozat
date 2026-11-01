@@ -18,3 +18,19 @@ div:hover {
 img {
     width: 15vw;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-size: 12pt;
+    padding: 0 10px;
+}

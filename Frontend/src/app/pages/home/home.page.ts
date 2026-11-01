@@ -13,10 +13,13 @@ import { Car } from '../../models/Car';
 })
 export class HomePage implements OnInit {
 
+  //public demo: Car = new Car();
   public isNoContent: boolean = true;
   public carList: Car[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    //this.carList = [this.demo];
+  }
 
   ngOnInit() {
     this.isNoContent = this.carList.length === 0;

@@ -19,6 +19,20 @@ img {
     width: 15vw;
 }
 
+h2,
+h3,
+p {
+    color: var(--text-color);
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
 ul {
     list-style-type: none;
     padding: 0;

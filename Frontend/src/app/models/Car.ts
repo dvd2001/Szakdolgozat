@@ -1,15 +1,15 @@
 export class Car {
     private chassisNumber: string = '';
-    public make: string = '';
-    public model: string = '';
-    public yearOfManufacture: number = 0;
-    public engineType: string = '';
-    public price: number = 0;
-    public fuelConsumption: number = 0;
-    public driveType: string = '';
-    public gearboxType: string = '';
-    public weight: number = 0;
-    public exteriorColor: string = '';
-    public interiorColor: string = '';
+    public make: string = 'make';
+    public model: string = 'model';
+    public yearOfManufacture: number = 2000;
+    public engineType: string = 'engine';
+    public price: number = 70000000;
+    public fuelConsumption: number = 7.5;
+    public driveType: string = 'drive';
+    public gearboxType: string = 'gearbox';
+    public weight: number = 1000;
+    public exteriorColor: string = 'exterior';
+    public interiorColor: string = 'interior';
     private salonId: string = '';
 }

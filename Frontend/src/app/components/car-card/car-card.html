@@ -3,12 +3,12 @@
     <h2 id="carName">{{ car?.make }} {{ car?.model }}</h2>
     <p id="carYear">{{ car?.yearOfManufacture }}</p>
     <ul id="details">
-        <li><strong>Üzemanyag:</strong> {{ car?.engineType }} </li>
+        <li><strong>Üzemanyag:</strong> {{ car?.fuelConsumption }} L/100km</li>
         <li><strong>Hajtás:</strong> {{ car?.driveType }}</li>
         <li><strong>Váltó:</strong> {{ car?.gearboxType }}</li>
         <li><strong>Súly:</strong> {{ (car?.weight)?.toLocaleString('hu-HU') }} kg</li>
         <li><strong>Külső szín:</strong> {{ car?.exteriorColor }}</li>
         <li><strong>Belső szín:</strong> {{ car?.interiorColor }}</li>
     </ul>
-    <h3 id="carPrice">{{ (car?.price)?.toLocaleString('hu-HU') }} Ft</h3>
+    <h3 id="carPrice">{{ (car?.price)?.toLocaleString('hu-HU') }} Ft-tól</h3>
 </div>

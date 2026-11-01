@@ -1,7 +1,6 @@
 div {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     height: fit-content;
     justify-content: space-evenly;
     padding: 10px;
@@ -88,6 +87,8 @@ app-navbar {
     border: 2px solid var(--bg-transparent);
     border-radius: 10px;
     padding: 10px;
+    position: sticky;
+    top: 13.5vh;
 }
 
 #list {

@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Navbar } from '../../components/navbar/navbar';
 import { NgIf, NgFor } from '@angular/common';
 import { Router } from '@angular/router';
+import { CarCard } from '../../components/car-card/car-card';
 
 @Component({
   selector: 'app-home.page',
-  imports: [Navbar, NgIf, NgFor],
+  imports: [Navbar, NgIf, NgFor, CarCard],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css',
 })

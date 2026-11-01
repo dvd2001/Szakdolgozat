@@ -1,0 +1,20 @@
+div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    width: 15vw;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    align-items: center;
+}
+
+div:hover {
+    background-color: var(--card-bg-hover);
+}
+
+img {
+    width: 15vw;
+}

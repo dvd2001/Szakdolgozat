@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Navbar } from '../../components/navbar/navbar';
-import { NgIf } from '@angular/common';
+import { NgIf, NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home.page',
-  imports: [Navbar, NgIf],
+  imports: [Navbar, NgIf, NgFor],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css',
 })

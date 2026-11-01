@@ -1,20 +1,16 @@
 <app-navbar></app-navbar>
 <div class="container">
     <div id="filter">
-        <h2>Keresés</h2>
+        <h2 id="title">Keresés</h2>
         <label for="make">Márka:</label>
         <select name="make" id="make">
             <option value="none">Nincs megadva</option>
-            <option value="">Select an option</option>
-            <option value="">Select an option</option>
         </select>
         <label for="model">Modell:</label>
         <select name="model" id="model">
             <option value="none">Nincs megadva</option>
-            <option value="">Select an option</option>
-            <option value="">Select an option</option>
         </select>
-        <label for="engine">Meghajtás:</label>
+        <label for="engine">Üzemanyag:</label>
         <select name="engine" id="engine">
             <option value="none">Nincs megadva</option>
             <option value="bensin">Benzin</option>
@@ -44,6 +40,6 @@
         <button>Keresés</button>
     </div>
     <div id="list">
-        <h2 *ngIf="isNoContent">Jelenleg nincs egy autó sem az adatbázisban!</h2>
+        <h2 *ngIf="isNoContent">Nincs ilyen autó az adatbázisban!</h2>
     </div>
 </div>

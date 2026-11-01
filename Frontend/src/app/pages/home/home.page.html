@@ -1,1 +1,49 @@
 <app-navbar></app-navbar>
+<div class="container">
+    <div id="filter">
+        <h2>Keresés</h2>
+        <label for="make">Márka:</label>
+        <select name="make" id="make">
+            <option value="none">Nincs megadva</option>
+            <option value="">Select an option</option>
+            <option value="">Select an option</option>
+        </select>
+        <label for="model">Modell:</label>
+        <select name="model" id="model">
+            <option value="none">Nincs megadva</option>
+            <option value="">Select an option</option>
+            <option value="">Select an option</option>
+        </select>
+        <label for="engine">Meghajtás:</label>
+        <select name="engine" id="engine">
+            <option value="none">Nincs megadva</option>
+            <option value="bensin">Benzin</option>
+            <option value="diesel">Dízel</option>
+            <option value="hybrid">Hibrid</option>
+            <option value="electric">Elektromos</option>
+        </select>
+        <label for="drive">Hajtás:</label>
+        <select name="drive" id="drive">
+            <option value="none">Nincs megadva</option>
+            <option value="front">Elsőkerék</option>
+            <option value="rear">Hátsókerék</option>
+            <option value="all">Összkerék</option>
+        </select>
+        <label for="gearbox">Váltó:</label>
+        <select name="gearbox" id="gearbox">
+            <option value="none">Nincs megadva</option>
+            <option value="manual">Manuális</option>
+            <option value="automatic">Automata</option>
+        </select>
+        <label for="price">Ár:</label>
+        <div name="price" id="price">
+            <input type="number" name="min-price" id="min-price" placeholder="Min ár">
+            <span>-</span>
+            <input type="number" name="max-price" id="max-price" placeholder="Max ár">
+        </div>
+        <button>Keresés</button>
+    </div>
+    <div id="list">
+        <h2 *ngIf="isNoContent">Jelenleg nincs egy autó sem az adatbázisban!</h2>
+    </div>
+</div>

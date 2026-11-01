@@ -1,0 +1,97 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+h1,
+h2,
+h3,
+p,
+label,
+select,
+option,
+input,
+button {
+    color: var(--text-color);
+}
+
+p,
+label,
+select,
+option,
+input,
+button,
+span {
+    font-size: 14pt;
+}
+
+select,
+input {
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+}
+
+label {
+    margin-top: 5px;
+}
+
+button {
+    background-color: var(--bg-color);
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-transparent);
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+span {
+    align-self: center;
+}
+
+app-navbar {
+    position: sticky;
+    top: 0;
+}
+
+#filter {
+    width: 20%;
+    flex-direction: column;
+    border: 2px solid var(--bg-transparent);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#list {
+    width: 75%;
+    margin-right: 2%;
+}
+
+#price {
+    padding: 0;
+    justify-content: space-between;
+}
+
+#min-price,
+#max-price {
+    width: 43%;
+}
